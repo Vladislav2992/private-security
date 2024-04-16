@@ -1,0 +1,41 @@
+.introduction__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.introduction__photo {
+
+    img {
+        width: 100%;
+        background-color: #e7e7e7;
+        margin-bottom: 36px;
+    }
+}
+
+.introduction__photo-description {
+    font-size: 24px;
+    line-height: 140%;
+
+    span {
+        font-size: 14px;
+    }
+}
+
+.introduction__text p {
+    margin-bottom: min(4vw, 30px);
+}
+
+
+@media(max-width:786px){
+    .introduction__inner {
+        grid-template-columns: 1fr;
+    }
+
+    .introduction__photo {
+        order: 2;
+    }
+    .introduction__text {
+        order: 1;
+    }
+}

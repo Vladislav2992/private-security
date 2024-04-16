@@ -1,0 +1,50 @@
+.map-wrapper {
+    background-color: #272727;
+    overflow: hidden;
+    .map {
+        height: 85vh;
+    }    
+}
+
+[class*="ground-pane"] {
+    filter: grayscale(1);
+}
+
+.balloon {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    p {
+        color: #000;
+        font-family: 'Mulish';
+        font-size: 16px;
+    }
+
+    h2 {
+        color: #000;
+        font-family: 'Mulish';
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .address,
+    .phones {
+        display: flex;
+        align-items: center;
+    }
+}
+
+/*
+.ymaps-2-1-79-user-selection-none {
+    background: url('../images/location.svg') no-repeat center;
+}
+*/
+@media(max-width:800px){
+    .map {
+        width: 90vw;
+        margin: 0 auto;
+    }
+}

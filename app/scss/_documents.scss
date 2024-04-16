@@ -1,0 +1,64 @@
+.documents__letters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    margin-bottom: 66px;
+}
+
+.documents__letter {
+    width: 265px;
+    img {
+        margin-bottom: 16px;
+    }
+}
+
+.documents__sertificats-wrapper {
+    display: flex;
+    gap: 46px;
+    width: 100%;
+}
+
+.documents__sertificat {
+    img {
+        margin-bottom: 16px;
+    }
+}
+
+.documents__sertificats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    max-width: 700px;
+}
+
+.documents__link {
+    text-decoration: underline;
+    position: relative;
+    padding-left: 38px;
+    margin-bottom: 25px;
+    font-size: 14px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 23px;
+        height: 32px;
+        background: url('../images/planshet.svg') no-repeat center;
+    }
+}
+
+@media(max-width:830px) {
+    .documents__sertificats-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media(max-width:600px) {
+    .documents__sertificats {
+        grid-template-columns: 1fr;
+    }
+}

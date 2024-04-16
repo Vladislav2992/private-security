@@ -1,0 +1,141 @@
+.main-contacts {
+    background: linear-gradient(102deg, #272727 0%, #272727 65%, #db2c1d 65%, #db2c1d 100%);
+    ;
+    color: #fff;
+
+    .section__title {
+        color: #fff;
+    }
+
+    p {
+        font-weight: 700;
+        margin-bottom: 50px;
+    }
+
+    .btn {
+        margin-top: 63px;
+    }
+}
+
+.main-contacts__title {
+    font-size: clamp(20px, 7vw, 40px);
+    line-height: 140%;
+    margin-bottom: 28px;
+}
+
+.main-contacts__form {
+    max-width: 950px;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    column-gap: 24px;
+    row-gap: 20px;
+    padding-right: 50px;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-contacts__input {
+    font-size: 16px;
+    padding: 15px;
+}
+
+.main-contacts__textarea,
+.main-contacts__input {
+    width: 100%;
+}
+
+.main-contacts__textarea {
+    grid-column: 1/-1;
+}
+
+.textarea {
+    resize: none;
+    height: 247px;
+}
+
+.rules-agree {
+    grid-column: 1/-1;
+}
+
+.main-contacts__checkbox {
+    display: none;
+}
+
+.main-contacts__checkbox:checked+.main-contacts__checkbox-label::after {
+    transform: scale(1);
+}
+
+.main-contacts__checkbox-label {
+    position: relative;
+    font-style: italic;
+    padding-left: 40px;
+    cursor: pointer;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 2px;
+        width: 20px;
+        height: 20px;
+        border: 1px solid #CFCFCF;
+        background: #FFF;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 5px;
+        top: 8px;
+        width: 11px;
+        height: 8px;
+        background: url('../images/check.svg') no-repeat;
+        transition: $transition;
+        transform: scale(0);
+    }
+
+    a {
+        text-decoration: underline;
+    }
+}
+
+.contacts .map-wrapper {
+    margin-bottom: 50px;
+}
+
+.contacts__form {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    gap: 20px;    
+    padding-right: 20px;
+}
+
+.contacts__address,
+.contacts__phone {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 20px;
+}
+
+@media(max-width:580px) {
+    .main-contacts__form {
+        grid-template-columns: 1fr;
+        padding-right: 20px;
+    }
+
+    .contacts .map-wrapper {
+        height: 500px;
+
+        .map {
+            height: 100%;
+        }
+    }
+    .contacts__form {
+        grid-template-columns: 1fr;
+        padding-right: 0;
+    }
+}
